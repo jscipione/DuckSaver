@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>DuckSaver documentation</title>
+</head>
+<body bgcolor="#eeeeee" link="#284696" vlink="#555555">
+<table cellspacing=3 cellpadding=1 border=0 bgcolor="#ffffff" width=100%>
+<tr><td>
+<table cellpadding=0 cellspacing=0 border=0 width=100%><tr>
+	<td width=5><img src="gfx/icon.gif" align="left" hspace=5 vspace=5></td>
+	<td><i><font face="Dutch801 Rm BT" size=+4>DuckSaver</font></i></td>
+	<td><img src="gfx/pecora.gif" align=right></td>
+</tr></table>
+</td></tr>
+<tr><td bgcolor="#284696"><img src="gfx/pixel.gif" height=1></td></tr>
+<tr><td><font face="Arial,Helvetica">
+
+<h1>Introduction</h1>
+<p>
+DuckSaver is a screen saver which transforms your screen into a duck pool.
+<br><br>
+
+<img src="gfx/screenshot.jpg"  border="1" alt="Screenshot" align="right">
+<h1>License</h1>
+<p>
+DuckSaver is freeware. You may share DuckSaver with as many people as you like, as long as the program is distributed with all parts, especially this documentation, intact. DuckSaver may not be sold.
+<br>
+<br>All graphics, especially the icon or brands are copyrighted by the author and may not be used in any form without the author's consent.
+
+<h1>Exclusion of liability</h1>
+<p>
+Great care was taken to make sure DuckSaver functions flawlessly and without fault.
+Nevertheless there is still a slim chance that errors may still occur.
+<br>The author will not be held liable for any potential damage caused by this software nor will he guarantee any unique (or special) functions.
+
+<h1>Installation</h1>
+<p>
+<ul>
+<li>Just start the installer!</li>
+<li>After that, open your ScreenSaver preferences and select DuckSaver!</li>
+</ul>
+</p>
+
+<h1>History</h1>
+<p>
+<ul>
+<li><b>April 29, 2002:</b> First release!
+</ul>
+
+<a name="Autor"></a>
+<h2>Author / contact</h2>
+<p>
+
+Here you can contact me:
+
+<table cellpadding=10 cellspacing=0 border=0 bgcolor="#eeeeee">
+<tr>
+	<td valign=top><font face="Arial,Helvetica">Werner Freytag</td></tr>
+<tr>
+	<td valign=top><font face="Arial,Helvetica">Neurieder Str. 8
+				<br>82152 Martinsried
+				<br>Germany</td>
+</tr>
+<tr>
+	<td valign=top><font face="Arial,Helvetica"><a href="mailto:info@pecora.de">info@pecora.de</a>
+	<br><a href="http://www.pecora.de" target="_blank">http://www.pecora.de</a></td>
+</tr>
+</table>
+<p>
+If you like DuckSaver, please vote for it at <a href="http://www.bezip.de/">BeZip.de</a> and <a href="http://www.bebits.com/">BeBits</a>!
+</font>
+</td>
+</tr>
+</table>
+</body>
+</html>
