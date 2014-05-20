@@ -14,6 +14,8 @@
 #include <Bitmap.h>
 #include <Entry.h>
 #include <Handler.h>
+#include <InterfaceDefs.h>
+#include <LayoutBuilder.h>
 #include <Mime.h>
 #include <Resources.h>
 #include <Screen.h>
@@ -146,32 +148,40 @@ DuckSaver::SaveState(BMessage* into) const
 void
 DuckSaver::StartConfig(BView* view)
 {
-	BStringView* child = new BStringView(BRect(10, 10, 220, 25),
-		B_EMPTY_STRING, "DuckSaver");
-	child->SetFont(be_bold_font);
-	view->AddChild(child);
-
-	view->AddChild(new BStringView(BRect(10, 30, 220, 55),
-		B_EMPTY_STRING, "©2002 by Werner Freytag"));
-
-	BSlider* dropRateSlider = new BSlider(BRect(10, 60, 220, 75), B_EMPTY_STRING,
-		"Drop rate:", new BMessage(kMsgUpdateTickSize), 2, 50);
+	BView* topView = NULL;
+	BStringView* title = NULL;
+	BSlider* dropRateSlider = new BSlider(B_EMPTY_STRING, "Drop rate:",
+		new BMessage(kMsgUpdateTickSize), 2, 50, B_HORIZONTAL);
 	dropRateSlider->SetValue(fDropRate);
 	dropRateSlider->SetLimitLabels("Slow", "Fast");
-	view->AddChild(dropRateSlider);
-
-	if (!fInitOk) {
-		child = new BStringView(BRect(10, 110, 220, 125),
-			B_EMPTY_STRING, "Error: Can't find resources!");
-		child->SetHighColor(255, 0, 0);
-		view->AddChild(child);
-	}
-
 	BWindow* window = view->Window();
 	if (window != NULL) {
 		window->AddHandler(this);
 		dropRateSlider->SetTarget(this);
 	}
+
+	if (!fInitOk) {
+		title = new BStringView(B_EMPTY_STRING,
+			"Error: Can't find resources!");
+		title->SetHighColor(ui_color(B_FAILURE_COLOR));
+		topView = BLayoutBuilder::Group<>(B_VERTICAL, 0)
+			.Add(title)
+			.SetInsets(B_USE_DEFAULT_SPACING)
+			.View();
+	} else {
+		title = new BStringView(B_EMPTY_STRING, "DuckSaver");
+		title->SetFont(be_bold_font);
+		topView = BLayoutBuilder::Group<>(B_VERTICAL, 0)
+			.Add(title)
+			.Add(new BStringView(B_EMPTY_STRING, "©2002 by Werner Freytag"))
+			.AddGlue()
+			.Add(dropRateSlider)
+			.SetInsets(B_USE_DEFAULT_SPACING)
+			.View();
+	}
+
+	topView->ResizeTo(view->Bounds().Width(), view->Bounds().Height());
+	view->AddChild(topView);
 }
 
 
