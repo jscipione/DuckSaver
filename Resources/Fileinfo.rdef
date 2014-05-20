@@ -59,12 +59,12 @@ resource app_signature "application/x-vnd.pecora-ducksaver";
 
 resource app_version {
 	major  = 1,
-	middle = 0,
+	middle = 1,
 	minor  = 0,
 
 	variety = B_APPV_FINAL,
 	internal = 1,
 
-	short_info = "DuckSaver 1.0.1",
-	long_info = "DuckSaver 1.0.1  ©2002 Werner Freytag"
+	short_info = "DuckSaver 1.1.0",
+	long_info = "DuckSaver 1.1.0  ©2002 Werner Freytag"
 };
